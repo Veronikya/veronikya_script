@@ -78,3 +78,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 sed -i 's/plugins=(/plugins=(zsh-syntax-highlighting /g' ~/.zshrc
 sed -i 's/plugins=(/plugins=(zsh-autosuggestions /g' ~/.zshrc
 source ~/.zshrc
+
+set-option -g default-shell /bin/zsh
