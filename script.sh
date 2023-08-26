@@ -1,17 +1,6 @@
 apt install zsh -y
 #! /bin/zsh
 apt update -y
-# 检查 sshd_config 文件中是否开启了密钥登录
-if grep -q "PubkeyAuthentication yes" /etc/ssh/sshd_config; then
-    echo "密钥登录已启用"
-else
-    echo "密钥登录未启用，正在帮助您开启..."
-    # 将 sshd_config 文件中的 PubkeyAuthentication 设置为 yes
-    sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/g' /etc/ssh/sshd_config
-    # 重启 ssh 服务
-    systemctl restart sshd
-    echo "密钥登录已启用"
-fi
 
 # 检查当前目录是否存在公钥文件
 # if [ -f "./id_rsa.pub" ]; then
