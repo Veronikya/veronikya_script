@@ -1,6 +1,6 @@
 ## [veronikya](https://github.com/Veronikya/veronikya_script) 的linux脚本
 
-这只是一个简单的安装脚本，适合使用在纯净linux系统使用优化
+这只是一个简单的安装脚本
 
 脚本将安装的软件包
 
