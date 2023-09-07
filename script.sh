@@ -1,18 +1,6 @@
-apt install zsh -y
-#! /bin/zsh
+#! /bin/sh
+# apt install zsh -y
 apt update -y
-
-# 检查当前目录是否存在公钥文件
-# if [ -f "./id_rsa.pub" ]; then
-#   echo "公钥文件已存在，正在导入..."
-#   ssh-add "./id_rsa.pub"
-# else
-#   echo "公钥文件不存在，正在生成..."
-#   # 生成公钥和私钥
-#   ssh-keygen -t rsa -b 4096 -C "Veronikya@github.com" -f ~/.ssh/id_rsa -N ""
-#   # 导入公钥
-#   ssh-add "~/.ssh/id_rsa.pub"
-# fi
 
 # 安装tmux并配置
 apt install vim -y
@@ -25,12 +13,12 @@ cp .tmux/.tmux.conf.local .
 
 
 # 安装zsh并配置
-# apt install zsh -y
+apt install zsh -y
 apt install curl -y
 cd ~
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cd ~ 
-# chsh -s /bin/zsh
+rm -rf ~/.oh-my-zsh
+echo -e 'Y' | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # 安装powerline
 sudo easy_install pip
 apt install python3-pip -y
@@ -67,5 +55,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 sed -i 's/plugins=(/plugins=(zsh-syntax-highlighting /g' ~/.zshrc
 sed -i 's/plugins=(/plugins=(zsh-autosuggestions /g' ~/.zshrc
 source ~/.zshrc
-
-set-option -g default-shell /bin/zsh
+# set-option -g default-shell /bin/zsh
+chsh -s /bin/zsh
