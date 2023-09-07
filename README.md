@@ -5,5 +5,5 @@
 脚本将安装的软件包
 
 * [nnn](https://github.com/jarun/nnn) 命令行文件管理器
-* [tmux ](https://github.com/tmux/tmux)she ll多窗口
+* [tmux ](https://github.com/tmux/tmux) shell多窗口
 * [zsh](https://github.com/zsh-users/zsh) 解释器
